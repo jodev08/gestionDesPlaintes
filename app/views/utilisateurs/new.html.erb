@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<title>Gestion des plaintes</title>
+   
+</head>
+
+
+
+
+<body>
+
+
+
+	<div class="div_img">
+    <h1 style="text-align: center;">Gestion des plaintes</h1>
+    <p>Date : <%= Date.today  %> </p>
+
+    <p style="text-align: justify;">
+	Chaque jour, l’APEFE doit mériter la confiance de ses donateurs, des pays partenaires et des populations pour lesquelles nous travaillons. Notre code de conduite est la pierre angulaire de notre engagement éthique <a href="https://www.apefe.org/Documents/Code_Ethique_2019.pdf" target="_blank">
+		(consulter le code éthique)
+	</a>
+	. Partout dans le monde, il sert à nous guider pour nous comporter de manière éthique et responsable.
+	<br>
+	<br>
+	<strong>
+		Quand appeler le bureau de l'intégrité ?
+	
+	</strong>
+	<br>
+	Lorsque vous êtes confronté à ce que vous percevez comme une rupture au regard du code éthique.
+	<br>
+	<br>
+	<strong>
+		Qui peut faire appel au bureau de l’intégrité ?
+	</strong>
+	<br>
+	Fournisseurs ou partenaires de l’APEFE.
+	<br>
+	Membres du personnel de l’APEFE.
+	<br>
+	Bénéficiaires directs des activités de l’APEFE en Belgique et à l’étranger.
+	<br>
+	<br>
+	<strong>
+		Comment les plaintes et les questions sont-elles traitées ?
+	</strong>
+	<br>
+	Les plaintes et les questions sont traitées avec la plus grande confidentialité. Toutefois, elles ne peuvent pas être notifiées anonymement. Nous devons pouvoir contacter le plaignant afin d'obtenir d'éventuelles informations supplémentaires.
+	<br>
+	Le système de gestion des plaintes et des questions est indépendant de la structure informatique. Seuls les membres du bureau d'intégrité ont accès aux formulaires remplis ou aux fichiers et courriels envoyés.
+	<br>
+	En enregistrant votre plainte, vous acceptez que dans le cadre de la RGPD, vos données soient conservées, éventuellement utilisées par des tiers afin de trouver une solution à votre plainte et uniquement dans ce cadre.
+	<br>
+	Vous pourrez à tout moment, demander que vos données soient définitivement supprimées de nos serveurs (droit à l'oubli).
+	<br>
+	Dans tous les cas celles-ci seraient définitivement supprimées dès la résolution définitive du problème lié à votre plainte.
+	<br>Tous les champs sont obligatoires.
+</p>
+</div>
+
+
+
+
+
+
+
+
+<%= form_with model: @utilisateur, local: true do |form| %>
+
+<div class="mb-3">
+   <%= form.label :title %>
+   <%= form.text_area :title %>
+</div>
+
+
+
+<div class="mb-3">
+   <%= form.label :nom%>
+   <%= form.text_field :nom %>
+</div>
+
+<div class="mb-3">
+   <%= form.label :prenom %>
+   <%= form.text_field :prenom %>
+</div>
+
+
+
+<div class="mb-3">
+   <%= form.label :rue %>
+   <%= form.text_area :rue %>
+</div>
+
+
+<div class="mb-3">
+   <%= form.label :numero %>
+   <%= form.number_field :numero %>
+</div>
+
+
+<div class="mb-3">
+   <%= form.label :code_postal%>
+   <%= form.text_area :code_postal %>
+</div>
+
+<div class="mb-3">
+   <%= form.label :localite%>
+   <%= form.text_area :localite %>
+</div>
+
+
+<div class="mb-3">
+   <%= form.label :pays%>
+   <%= form.text_area :pays %>
+</div>
+<div class="mb-3">
+
+   <%= form.label :numero_telephone%>
+   <%= form.telephone_field  :numero_telephone %>
+</div>
+
+
+<div class="mb-3">
+   <%= form.label :e_mail%>
+   <%= form.email_field :e_mail , class:"form-control"%>
+</div>
+
+
+
+
+
+<div class="mb-3">
+   <%= form.label :plainte %>
+   <%= form.text_area :plainte %>
+
+</div>
+
+
+   
+<div class="mb-3">
+   <button type="submit" class="btn btn-primary">Envoyer</button>
+</div>
+
+    
+<%end%>
