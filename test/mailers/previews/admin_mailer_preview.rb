@@ -3,6 +3,7 @@
 class AdminMailerPreview < ActionMailer::Preview
 
   def contact
+    AdminMailer.contact(Utilisateur.first)
     
    
     
