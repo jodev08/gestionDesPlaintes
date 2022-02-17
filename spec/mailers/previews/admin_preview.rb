@@ -2,7 +2,9 @@
 class AdminPreview < ActionMailer::Preview
 
   # Preview this email at http://localhost:3000/rails/mailers/admin/contact_mailer
-  def contact
+  def contact()
+
+    
     
     AdminMailer.contact()
   end

@@ -47,9 +47,8 @@ gem bootstrap
 
 
 
-https://www.youtube.com/watch?v=XTkPSqSchfA&t=3115s
-
-a faire : format bootstrap suite 
+mailer : 10:01
+https://www.youtube.com/watch?v=yqxORosQQbo&list=PLdTytUiloS1656XC6ZotfxBV8CFTWNXmn&index=1
 
 
 

@@ -16,10 +16,18 @@ class UtilisateursController < ApplicationController
     end
 
     def create
-        Utilisateur.create(params_blague())
+        @utilisateur = Utilisateur.new(params_blague)
+        AdminMailer.contact.deliver_later
     
     end
 
+    
+    
+    
+
+    
+    
+    
     private 
  
     def params_blague
